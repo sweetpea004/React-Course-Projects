@@ -1,6 +1,20 @@
 {
   "opinions": [
     {
+      "id": 1765670785071,
+      "votes": 2,
+      "userName": "0429590295",
+      "title": "I LOVE REACT",
+      "body": "YIPPIEEE!!!!!!"
+    },
+    {
+      "id": 1765670447246,
+      "votes": 1,
+      "userName": "0429590295",
+      "title": "I need help",
+      "body": "please save my soul"
+    },
+    {
       "id": 1,
       "userName": "Maximilian Schwarzmüller",
       "title": "Do yourself a favor and learn React!",
