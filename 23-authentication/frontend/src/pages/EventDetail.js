@@ -9,6 +9,7 @@ import {
 
 import EventItem from '../components/EventItem';
 import EventsList from '../components/EventsList';
+import { getAuthToken } from '../util/Auth';
 
 function EventDetailPage() {
   const { event, events } = useRouteLoaderData('event-detail');
@@ -70,7 +71,7 @@ async function loadEvents() {
 export async function loader({ request, params }) {
   const id = params.eventId;
 
-  return defer({
+  return ({
     event: await loadEvent(id),
     events: loadEvents(),
   });
@@ -78,17 +79,19 @@ export async function loader({ request, params }) {
 
 export async function action({ params, request }) {
   const eventId = params.eventId;
+  const token = getAuthToken();
   const response = await fetch('http://localhost:8080/events/' + eventId, {
     method: request.method,
+    headers: {
+      'Authorization': 'Bearer ' + token
+    }
   });
 
   if (!response.ok) {
-    throw json(
-      { message: 'Could not delete event.' },
-      {
-        status: 500,
-      }
-    );
+    throw new Response(JSON.stringify({message: 'Could not delete event.'}), {
+      status: 500,
+    });
   }
+
   return redirect('/events');
 }
