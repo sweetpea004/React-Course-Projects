@@ -1,9 +1,7 @@
 import { Suspense } from 'react';
 import {
   useRouteLoaderData,
-  json,
   redirect,
-  defer,
   Await,
 } from 'react-router-dom';
 
@@ -36,11 +34,11 @@ async function loadEvent(id) {
   const response = await fetch('http://localhost:8080/events/' + id);
 
   if (!response.ok) {
-    throw json(
+    throw new Response(JSON.stringify(
       { message: 'Could not fetch details for selected event.' },
       {
         status: 500,
-      }
+      })
     );
   } else {
     const resData = await response.json();
@@ -56,11 +54,11 @@ async function loadEvents() {
     // throw new Response(JSON.stringify({ message: 'Could not fetch events.' }), {
     //   status: 500,
     // });
-    throw json(
+    throw new Response(JSON.stringify(
       { message: 'Could not fetch events.' },
       {
         status: 500,
-      }
+      })
     );
   } else {
     const resData = await response.json();
