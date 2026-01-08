@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { Suspense } from 'react';
+import Link from 'next/link';
 
 import classes from './page.module.css';
 import MealsGrid from '@/components/meals/meals-grid';
@@ -7,18 +7,17 @@ import { getMeals } from '@/lib/meals';
 
 export const metadata = {
   title: 'All Meals',
-  description: 'Browse the deliciousn meals shared by our comunity.',
+  description: 'Browse the delicious meals shared by our vibrant community.',
 };
 
 async function Meals() {
+  console.log('Fetching meals');
   const meals = await getMeals();
 
   return <MealsGrid meals={meals} />;
 }
 
 export default function MealsPage() {
-  
-
   return (
     <>
       <header className={classes.header}>
@@ -30,13 +29,11 @@ export default function MealsPage() {
           Choose your favorite recipe and cook it yourself. It is easy and fun!
         </p>
         <p className={classes.cta}>
-          <Link href="/meals/share">
-            Share Your Favorite Recipe
-          </Link>
+          <Link href="/meals/share">Share Your Favorite Recipe</Link>
         </p>
       </header>
       <main className={classes.main}>
-        <Suspense fallback={<p className={classes.loading}>Fetching Meals...</p>}>
+        <Suspense fallback={<p className={classes.loading}>Fetching meals...</p>}>
           <Meals />
         </Suspense>
       </main>
