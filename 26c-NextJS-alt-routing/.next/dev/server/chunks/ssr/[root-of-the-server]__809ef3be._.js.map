@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Computer/Documents/React%20Projects/React-Course-Projects/26c-NextJS-alt-routing/pages/news.js"],"sourcesContent":["// our-domain.com/news\r\n\r\nfunction NewsPage() {\r\n    return (\r\n        <>\r\n            <h1>The News Page</h1>\r\n        </>\r\n    );\r\n}\r\n\r\nexport default NewsPage;"],"names":[],"mappings":";;;;;;AAAA,sBAAsB;AAEtB,SAAS;IACL,qBACI;kBACI,cAAA,qKAAC;sBAAG;;;;;;;AAGhB;uCAEe"}}]
+}

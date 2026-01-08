@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Computer/Documents/React%20Projects/React-Course-Projects/26c-NextJS-alt-routing/pages/news/%5BnewsId%5D.js"],"sourcesContent":["\r\nfunction DetailPage() {\r\n\r\n    const router = useRouter();\r\n\r\n    const newsId = router.query.newsId;\r\n\r\n    // send a request to the backend api\r\n    // to fetch the news item with newsId\r\n\r\n    return (\r\n        <>\r\n            <h1>The News Page</h1>\r\n        </>\r\n    );\r\n}\r\n\r\nexport default DetailPage;"],"names":[],"mappings":";;;;;;AACA,SAAS;IAEL,MAAM,SAAS;IAEf,MAAM,SAAS,OAAO,KAAK,CAAC,MAAM;IAElC,oCAAoC;IACpC,qCAAqC;IAErC,qBACI;kBACI,cAAA,qKAAC;sBAAG;;;;;;;AAGhB;uCAEe"}}]
+}

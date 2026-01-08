@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Computer/Documents/React%20Projects/React-Course-Projects/26c-NextJS-alt-routing/pages/news/index.js"],"sourcesContent":["// our-domain.com/news\r\n\r\nimport { Fragment } from \"react/jsx-runtime\";\r\nimport Link from 'next/link';\r\n\r\nfunction NewsPage() {\r\n    return (\r\n        <Fragment>\r\n            <h1>The News Page</h1>\r\n            <ul>\r\n                <li><Link href=\"news/nextjs-is-a-great-framework\">NextJs Is A Great Framework</Link></li>\r\n                <li>Something Else</li>\r\n            </ul>\r\n        </Fragment>\r\n    );\r\n}\r\n\r\nexport default NewsPage;"],"names":[],"mappings":";;;;;AAAA,sBAAsB;AAEtB;AACA;;;;AAEA,SAAS;IACL,qBACI,qKAAC,mJAAQ;;0BACL,qKAAC;0BAAG;;;;;;0BACJ,qKAAC;;kCACG,qKAAC;kCAAG,cAAA,qKAAC,gIAAI;4BAAC,MAAK;sCAAmC;;;;;;;;;;;kCAClD,qKAAC;kCAAG;;;;;;;;;;;;;;;;;;AAIpB;uCAEe"}}]
+}
