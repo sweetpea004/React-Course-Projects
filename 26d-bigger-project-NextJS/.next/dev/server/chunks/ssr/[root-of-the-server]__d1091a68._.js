@@ -79,7 +79,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$meetups$2f$Mee
 function MeetupItem(props) {
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
     function showDetailsHandler() {
-        router.push('/');
+        router.push('/' + props.id);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("li", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$meetups$2f$MeetupItem$2e$module$2e$css__$5b$ssr$5d$__$28$css__module$29$__["default"].item,
@@ -197,33 +197,72 @@ const __TURBOPACK__default__export__ = MeetupList;
 
 __turbopack_context__.s([
     "default",
-    ()=>__TURBOPACK__default__export__
+    ()=>__TURBOPACK__default__export__,
+    "getStaticProps",
+    ()=>getStaticProps
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
+var __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$mongodb$29$__ = __turbopack_context__.i("[externals]/mongodb [external] (mongodb, cjs, [project]/node_modules/mongodb)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/head.js [ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$meetups$2f$MeetupList$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/meetups/MeetupList.js [ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Layout$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/layout/Layout.js [ssr] (ecmascript)");
 ;
 ;
 ;
-const DUMMY_MEETUPS = [
-    {
-        id: 'm1',
-        title: 'A first meetup',
-        image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341395/EducationHub/photos/sonoran-desert.jpg',
-        address: 'Some address 5, 12345 Some City',
-        description: 'This is a first meetup!'
-    }
-];
-function HomePage() {
+;
+function HomePage(props) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["Fragment"], {
-        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$meetups$2f$MeetupList$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
-            meetups: DUMMY_MEETUPS
-        }, void 0, false, {
-            fileName: "[project]/pages/index.js",
-            lineNumber: 17,
-            columnNumber: 13
-        }, this)
-    }, void 0, false);
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("title", {
+                        children: "React Meetups"
+                    }, void 0, false, {
+                        fileName: "[project]/pages/index.js",
+                        lineNumber: 10,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])("meta", {
+                        name: "description",
+                        content: "Browse a huge list of active React Meetups!"
+                    }, void 0, false, {
+                        fileName: "[project]/pages/index.js",
+                        lineNumber: 11,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/pages/index.js",
+                lineNumber: 9,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$meetups$2f$MeetupList$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["default"], {
+                meetups: props.meetups
+            }, void 0, false, {
+                fileName: "[project]/pages/index.js",
+                lineNumber: 16,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true);
+}
+async function getStaticProps() {
+    // fetch data from an API
+    const client = await __TURBOPACK__imported__module__$5b$externals$5d2f$mongodb__$5b$external$5d$__$28$mongodb$2c$__cjs$2c$__$5b$project$5d2f$node_modules$2f$mongodb$29$__["MongoClient"].connect('mongodb+srv://emmapersephonepurvis:zOCSqs78upKil1Py@meetups.bphzlox.mongodb.net/');
+    const db = client.db();
+    const meetupsCollection = db.collection('meetups');
+    const meetups = await meetupsCollection.find().toArray();
+    client.close();
+    return {
+        props: {
+            meetups: meetups.map((meetup)=>({
+                    title: meetup.title,
+                    address: meetup.address,
+                    image: meetup.image,
+                    id: meetup._id.toString()
+                }))
+        },
+        revalidate: 10
+    };
 }
 const __TURBOPACK__default__export__ = HomePage;
 }),

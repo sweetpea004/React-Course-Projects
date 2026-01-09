@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Computer/Documents/React%20Projects/React-Course-Projects/26d-bigger-project-NextJS/components/meetups/MeetupDetail.module.css"],"sourcesContent":[".detail {\r\n    text-align: center;\r\n}\r\n\r\n.detail img {\r\n    width: 100%;\r\n}"],"names":[],"mappings":"AAAA;;;;AAIA"}}]
+}

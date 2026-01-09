@@ -1,22 +1,48 @@
+import { MongoClient } from 'mongodb';
+import Head from 'next/head';
 import MeetupList from '../components/meetups/MeetupList';
-import Layout from '../components/layout/Layout';
 
-const DUMMY_MEETUPS = [
-    {
-        id:'m1',
-        title: 'A first meetup',
-        image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341395/EducationHub/photos/sonoran-desert.jpg',
-        address: 'Some address 5, 12345 Some City',
-        description: 'This is a first meetup!',
-    }
-]
-
-function HomePage() {
+function HomePage(props) {
+    
     return (
         <>
-            <MeetupList meetups={DUMMY_MEETUPS}/>
+            <Head>
+                <title>React Meetups</title>
+                <meta 
+                    name="description" 
+                    content="Browse a huge list of active React Meetups!"
+                />
+            </Head>
+            <MeetupList meetups={props.meetups}/>
         </>
     );
+}
+
+export async function getStaticProps() {
+    // fetch data from an API
+    
+    const client = await MongoClient.connect(
+      'mongodb+srv://emmapersephonepurvis:zOCSqs78upKil1Py@meetups.bphzlox.mongodb.net/'
+    );
+    const db = client.db();
+
+    const meetupsCollection = db.collection('meetups');
+
+    const meetups = await meetupsCollection.find().toArray();
+
+    client.close();
+
+    return {
+        props: {
+            meetups: meetups.map(meetup => ({
+                title: meetup.title,
+                address: meetup.address,
+                image: meetup.image,
+                id: meetup._id.toString(),
+            }))
+        },
+        revalidate: 10
+    }
 }
 
 export default HomePage;

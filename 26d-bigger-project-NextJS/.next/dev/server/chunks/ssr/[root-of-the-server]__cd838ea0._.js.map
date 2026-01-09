@@ -2,5 +2,5 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 3, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}}]
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Computer/Documents/React%20Projects/React-Course-Projects/26d-bigger-project-NextJS/pages/%5BmeetupId%5D/index.js"],"sourcesContent":["import { Fragment } from \"react/jsx-runtime\";\r\n\r\nfunction MeetupDetails() {\r\n    return (\r\n        <Fragment>\r\n            <img src=\"\" alt='Event Image' />\r\n            <h1>Meetup</h1>\r\n            <address>Some Street</address>\r\n            <p>Meetup description</p>\r\n        </Fragment>\r\n    );\r\n}\r\n\r\nexport default MeetupDetails;"],"names":[],"mappings":";;;;;AAAA;;;AAEA,SAAS;IACL,qBACI,qKAAC,mJAAQ;;0BACL,qKAAC;gBAAI,KAAI;gBAAG,KAAI;;;;;;0BAChB,qKAAC;0BAAG;;;;;;0BACJ,qKAAC;0BAAQ;;;;;;0BACT,qKAAC;0BAAE;;;;;;;;;;;;AAGf;uCAEe"}}]
 }

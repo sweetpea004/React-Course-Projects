@@ -526,7 +526,7 @@ function MeetupItem(props) {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
     function showDetailsHandler() {
-        router.push('/');
+        router.push('/' + props.id);
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$meetups$2f$MeetupItem$2e$module$2e$css__$5b$client$5d$__$28$css__module$29$__["default"].item,
@@ -800,6 +800,8 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 "use strict";
 
 __turbopack_context__.s([
+    "__N_SSG",
+    ()=>__N_SSG,
     "default",
     ()=>__TURBOPACK__default__export__
 ]);
@@ -809,27 +811,19 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$layout$2f$Layo
 ;
 ;
 ;
-const DUMMY_MEETUPS = [
-    {
-        id: 'm1',
-        title: 'A first meetup',
-        image: 'https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341395/EducationHub/photos/sonoran-desert.jpg',
-        address: 'Some address 5, 12345 Some City',
-        description: 'This is a first meetup!'
-    }
-];
-function HomePage() {
+function HomePage(props) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$meetups$2f$MeetupList$2e$js__$5b$client$5d$__$28$ecmascript$29$__["default"], {
-            meetups: DUMMY_MEETUPS
+            meetups: props.meetups
         }, void 0, false, {
             fileName: "[project]/pages/index.js",
-            lineNumber: 17,
+            lineNumber: 9,
             columnNumber: 13
         }, this)
     }, void 0, false);
 }
 _c = HomePage;
+var __N_SSG = true;
 const __TURBOPACK__default__export__ = HomePage;
 var _c;
 __turbopack_context__.k.register(_c, "HomePage");

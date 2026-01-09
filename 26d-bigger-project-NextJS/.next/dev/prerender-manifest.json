@@ -1,11 +1,1 @@
-{
-  "version": 4,
-  "routes": {},
-  "dynamicRoutes": {},
-  "notFoundRoutes": [],
-  "preview": {
-    "previewModeId": "1f11189f3cd44dd41ac9e1b2519e8650",
-    "previewModeSigningKey": "0901b3a0b8894ef872d8272eff1cc5c35a2553bced5ba15c7d81d614f5054776",
-    "previewModeEncryptionKey": "4ff2ca56f4fc5065fd72ad46886413667f303623d68ecbc2149a81ca865191f7"
-  }
-}
+{"version":4,"routes":{"/m1":{},"/696063830a799915891bf77f":{}},"dynamicRoutes":{"/[meetupId]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/[meetupId]","routeRegex":"^\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"19e937eb413688e169be2928ee7d6fab","previewModeSigningKey":"4a8144578f6e0d152dac50f85af8f4c901ed2fc0169b97ff4362fdd48efe9732","previewModeEncryptionKey":"fdd9de94bab8e4a924a482fa1d4b2608359f8d37ef4bf9bbe094e8dc02ab9cde"}}

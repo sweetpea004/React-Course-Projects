@@ -20,6 +20,7 @@ self.__BUILD_MANIFEST = {
     "/",
     "/_app",
     "/_error",
+    "/api/new-meetup",
     "/new-meetup",
     "/[meetupId]"
   ]
