@@ -1,5 +1,12 @@
 // import ClientDemo from './ClientDemo';
 
+/**
+ * Server component
+ * adv: less code sent to the client (better performance). 
+ * Fetching data is on the server side
+ * 
+ */
+
 export default async function RSCDemo() {
   console.log('RSCDemo rendered');
   return (
