@@ -58,3 +58,27 @@ let course: string = 'React - The Complete Guide';
 
 let course2: string | number = 'React - The Complete Guide';
 course2 = 12341;
+
+// functions & types
+
+function add(a: number, b: number): number { // no need to define return type but u can
+    return a + b;
+}
+
+function print(value: any) {
+    console.log(value);
+}
+
+// Generics
+
+function insertAtBeginning<T>(array: T[], value: T) {
+    const newArray = [value, ...array];
+    return newArray;
+}
+
+const demoArray = [1, 2, 3];
+
+const updatedArray = insertAtBeginning(demoArray, -1);
+const stringArray = insertAtBeginning(['a', 'b', 'c'], 'd');
+
+
