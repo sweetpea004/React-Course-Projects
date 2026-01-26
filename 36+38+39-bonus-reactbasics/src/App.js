@@ -1,9 +1,9 @@
-import Card from "./components/UI/Card";
-import ExpenseList from "./components/Expenses/ExpenseList";
-import NewExpense from "./components/NewExpense/NewExpense";
 
-function App() {
-  const expenses = [
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
+import { useState } from "react";
+
+const DUMMY_EXPENSES = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -25,14 +25,19 @@ function App() {
     },
   ];
 
+function App() {
+  const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
+
   function addExpenseHandler(expense) {
-    
+    setExpenses(prevState => {
+      return [expense, ...prevState];
+    });
   }
 
   return (
     <div>
       <NewExpense addExpenseHandler={addExpenseHandler}/>
-      <Card className="expenses"><ExpenseList expenses={expenses}/></Card>
+      <Expenses expenses={expenses}/>
       
     </div>
   );
